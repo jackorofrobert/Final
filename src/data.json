@@ -1,0 +1,246 @@
+{
+  "shopData": [
+    {
+      "name": "Roast Beef",
+      "img": "img/dogfood.jpg",
+      "weight": 1.5,
+      "target": "dog",
+      "price": 100,
+      "type": "food",
+      "code": 1
+    },
+    {
+      "name": "Beef Milk",
+      "img": "img/dogfood2.jpg",
+      "weight": 1.5,
+      "target": "dog",
+      "price": 100,
+      "type": "food",
+      "code": 2
+    },
+    {
+      "name": "Class Pet",
+      "img": "img/dogfood3.jpg",
+      "weight": 1.5,
+      "target": "dog",
+      "price": 100,
+      "type": "food",
+      "code": 3
+    },
+    {
+      "name": "Pedigree",
+      "img": "img/dogfood4.jpg",
+      "weight": 1.5,
+      "target": "dog",
+      "price": 100,
+      "type": "food",
+      "code": 4
+    },
+    {
+      "name": "House 1",
+      "img": "img/doghouse.jpg",
+      "weight": 20,
+      "target": "dog",
+      "price": 100,
+      "type": "house",
+      "code": 5
+    },
+    {
+      "name": "House 2",
+      "img": "img/doghouse2.jpg",
+      "weight": 20,
+      "target": "dog",
+      "price": 100,
+      "type": "house",
+      "code": 6
+    },
+    {
+      "name": "House 3",
+      "img": "img/doghouse3.jpg",
+      "weight": 10,
+      "target": "dog",
+      "price": 100,
+      "type": "house",
+      "code": 7
+    },
+    {
+      "name": "House 4",
+      "img": "img/doghouse4.jpg",
+      "weight": 20,
+      "target": "dog",
+      "price": 100,
+      "type": "house",
+      "code": 8
+    },
+    {
+      "name": "Toy 1",
+      "img": "img/dogtoy.jpg",
+      "weight": 0.1,
+      "target": "dog",
+      "price": 100,
+      "type": "toy",
+      "code": 9
+    },
+    {
+      "name": "Toy 2",
+      "img": "img/dogtoy2.jpg",
+      "weight": 0.1,
+      "target": "dog",
+      "price": 100,
+      "type": "toy",
+      "code": 10
+    },
+    {
+      "name": "Toy 3",
+      "img": "img/dogtoy3.jpg",
+      "weight": 0.1,
+      "target": "dog",
+      "price": 100,
+      "type": "toy",
+      "code": 11
+    },
+    {
+      "name": "Toy 4",
+      "img": "img/dogtoy4.jpg",
+      "weight": 0.1,
+      "target": "dog",
+      "price": 100,
+      "type": "toy",
+      "code": 12
+    },
+    {
+      "name": "Whiskas",
+      "img": "img/catfood.jpg",
+      "weight": 1.5,
+      "target": "cat",
+      "price": 100,
+      "type": "food",
+      "code": 13
+    },
+    {
+      "name": "Royal Canin",
+      "img": "img/catfood2.jpg",
+      "weight": 1.5,
+      "target": "cat",
+      "price": 100,
+      "type": "food",
+      "code": 14
+    },
+    {
+      "name": "Me-O",
+      "img": "img/catfood3.jpg",
+      "weight": 1.5,
+      "target": "cat",
+      "price": 100,
+      "type": "food",
+      "code": 15
+    },
+    {
+      "name": "Catsrang",
+      "img": "img/catfood4.jpg",
+      "weight": 1.5,
+      "target": "cat",
+      "price": 100,
+      "type": "food",
+      "code": 16
+    },
+    {
+      "name": "House 1",
+      "img": "img/cathouse.jpg.jpg",
+      "weight": 20,
+      "target": "cat",
+      "price": 100,
+      "type": "house",
+      "code": 17
+    },
+    {
+      "name": "House 2",
+      "img": "img/cathouse2.jpg",
+      "weight": 20,
+      "target": "cat",
+      "price": 100,
+      "type": "house",
+      "code": 18
+    },
+    {
+      "name": "House 3",
+      "img": "img/cathouse3.jpg",
+      "weight": 10,
+      "target": "cat",
+      "price": 100,
+      "type": "house",
+      "code": 19
+    },
+    {
+      "name": "House 4",
+      "img": "img/cathouse4.jpg",
+      "weight": 20,
+      "target": "cat",
+      "price": 100,
+      "type": "house",
+      "code": 20
+    },
+    {
+      "name": "Toy 1",
+      "img": "img/cattoy.jpg",
+      "weight": 0.1,
+      "target": "cat",
+      "price": 100,
+      "type": "toy",
+      "code": 21
+    },
+    {
+      "name": "Toy 2",
+      "img": "img/cattoy2.jpg",
+      "weight": 0.1,
+      "target": "cat",
+      "price": 100,
+      "type": "toy",
+      "code": 22
+    },
+    {
+      "name": "Toy 3",
+      "img": "img/cattoy3.jpg",
+      "weight": 0.1,
+      "target": "cat",
+      "price": 100,
+      "type": "toy",
+      "code": 23
+    },
+    {
+      "name": "Toy 4",
+      "img": "img/cattoy4.jpg",
+      "weight": 0.1,
+      "target": "cat",
+      "price": 100,
+      "type": "toy",
+      "code": 24
+    }
+  ],
+
+  "dogData": [
+    { "image": "./img/Alaska.jpg", "title": "Alaska", "popular": true },
+    { "image": "img/Corgi.jpg", "title": "Corgi", "popular": true },
+    { "image": "img/Husky.jpg", "title": "Husky", "popular": true },
+    { "image": "img/Poodle.jpg", "title": "Poodle", "popular": true },
+    { "image": "img/Pug.jpg", "title": "Pug", "popular": false },
+    { "image": "img/Bulldog.jpg", "title": "Bulldog", "popular": false },
+    { "image": "img/Chihuahua.jpg", "title": "Chihuahua", "popular": false },
+    {
+      "image": "img/Golden_Retriever.jpg",
+      "title": "Golden_Retriever",
+      "popular": false
+    }
+  ],
+
+  "catData": [
+    { "image": "img/Munchkin.jpg", "title": "Munchkin" },
+    { "image": "img/Korat.jpg", "title": "Korat" },
+    { "image": "img/Bengall.jpg", "title": "Bengall" },
+    { "image": "img/Exotic.jpg", "title": "Exotic" },
+    { "image": "img/Ragdoll.jpg", "title": "Ragdoll" },
+    { "image": "img/Angora.jpg", "title": "Angora" },
+    { "image": "img/Chartreux.jpg", "title": "Chartreux" },
+    { "image": "img/Tam thể.jpg", "title": "Tam thể" }
+  ]
+}

@@ -1,0 +1,11 @@
+.bg-service {
+  background-color: #feb736;
+  float: left;
+  padding: 15px 0;
+  color: #151515;
+}
+
+.title-2 {
+  font-family: font-display;
+  font-size: 28px;
+}

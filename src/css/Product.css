@@ -1,0 +1,17 @@
+.bg-product {
+  background-color: #f1f0f0;
+  float: left;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.title-3 {
+  font-family: font-display;
+  font-size: 24px;
+  color: #333;
+}
+
+.fit {
+  height: 255px;
+  width: 100%;
+}
