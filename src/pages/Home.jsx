@@ -33,10 +33,12 @@ const Home = () => {
       <div className="clear"></div>
       <div className="container">
         <PopularSection />
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
+        {data.catData.map((item, index) => {
+          if (item.popular)
+            return (
+              <Product key={index} image={item.image} title={item.title} />
+            );
+        })}
       </div>
       <div className="clear"></div>
       <div className="container-fluid bg-banner">

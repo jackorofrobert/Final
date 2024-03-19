@@ -1,7 +1,7 @@
 import React from "react";
+import data from "../data.json";
 import background from "../img/background-slider.jpg";
 import Services from "../components/Services";
-import PopularSection from "../components/PopularSection";
 import Product from "../components/Product";
 import Offer from "../components/Offer";
 
@@ -19,15 +19,11 @@ const Cats = () => {
       </div>
       <div className="clear"></div>
       <div className="container">
-        <PopularSection />
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
-        {/* <Product image={catProduct.image} title={catProduct.title} /> */}
+        {data.catData.map((item, index) => {
+          return (
+            <Product key={index} image={item.image} title={item.title} />
+          );
+        })}
       </div>
       <div className="clear"></div>
       <div className="container">

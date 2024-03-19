@@ -234,13 +234,13 @@
   ],
 
   "catData": [
-    { "image": "img/Munchkin.jpg", "title": "Munchkin" },
-    { "image": "img/Korat.jpg", "title": "Korat" },
-    { "image": "img/Bengall.jpg", "title": "Bengall" },
-    { "image": "img/Exotic.jpg", "title": "Exotic" },
-    { "image": "img/Ragdoll.jpg", "title": "Ragdoll" },
-    { "image": "img/Angora.jpg", "title": "Angora" },
-    { "image": "img/Chartreux.jpg", "title": "Chartreux" },
-    { "image": "img/Tam thể.jpg", "title": "Tam thể" }
+    { "image": "img/Munchkin.jpg", "title": "Munchkin", "popular": true },
+    { "image": "img/Korat.jpg", "title": "Korat", "popular": true  },
+    { "image": "img/Bengall.jpg", "title": "Bengall", "popular": true  },
+    { "image": "img/Exotic.jpg", "title": "Exotic", "popular": true  },
+    { "image": "img/Ragdoll.jpg", "title": "Ragdoll", "popular": false  },
+    { "image": "img/Angora.jpg", "title": "Angora", "popular": true  },
+    { "image": "img/Chartreux.jpg", "title": "Chartreux", "popular": false  },
+    { "image": "img/Tam thể.jpg", "title": "Tam thể", "popular": false  }
   ]
 }
