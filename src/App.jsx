@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import "./css/font-awesome.css";
 import "./App.css";
 import "./css/TopButton.css";
 import Home from "./pages/Home";
