@@ -8,12 +8,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Dogs from "./pages/Dogs";
 import Cats from "./pages/Cats";
+import DogShop from "./pages/DogShop";
+import CatShop from "./pages/CatShop";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = useCallback(() => {
-    console.log(window.pageYOffset)
     if (window.pageYOffset > 20) {
       setIsVisible(true);
     } else {
@@ -48,6 +49,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about/dogs" element={<Dogs />} />
         <Route path="/about/cats" element={<Cats />} />
+        <Route path="/shop/dogs" element={<DogShop />} />
+        <Route path="/shop/cats" element={<CatShop />} />
       </Routes>
       <div className="container-fluid bg-footer">
         <Footer />
@@ -59,7 +62,7 @@ const App = () => {
           className={`scroll-to-top ${isVisible ? "show" : ""}`}
           id="myBtn"
         >
-          Back to top
+          Top
         </button>
       )}
     </div>

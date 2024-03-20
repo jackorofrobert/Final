@@ -1,5 +1,5 @@
 {
-  "shopData": [
+  "dogShopData": [
     {
       "name": "Roast Beef",
       "img": "img/dogfood.jpg",
@@ -107,7 +107,10 @@
       "price": 100,
       "type": "toy",
       "code": 12
-    },
+    }
+  ],
+
+  "catShopData": [
     {
       "name": "Whiskas",
       "img": "img/catfood.jpg",
@@ -239,7 +242,7 @@
     { "image": "img/Bengall.jpg", "title": "Bengall", "popular": true  },
     { "image": "img/Exotic.jpg", "title": "Exotic", "popular": true  },
     { "image": "img/Ragdoll.jpg", "title": "Ragdoll", "popular": false  },
-    { "image": "img/Angora.jpg", "title": "Angora", "popular": true  },
+    { "image": "img/Angora.jpg", "title": "Angora", "popular": false  },
     { "image": "img/Chartreux.jpg", "title": "Chartreux", "popular": false  },
     { "image": "img/Tam thể.jpg", "title": "Tam thể", "popular": false  }
   ]
