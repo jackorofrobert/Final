@@ -11,8 +11,8 @@ const Home = () => {
 
   return (
     <div>
-      <div className="container-fluid slider">
-        <img src={background} alt="Background" />
+        <div className="container slider">
+          <img src={background} alt="Background" />
       </div>
       <div className="clear"></div>
       <div className="container">
@@ -26,7 +26,7 @@ const Home = () => {
         {data.dogData.map((item, index) => {
           if (item.popular)
             return (
-              <Product key={index} image={item.image} title={item.title} />
+              <Product key={index} image={item.img} title={item.title} />
             );
         })}
       </div>
@@ -36,7 +36,7 @@ const Home = () => {
         {data.catData.map((item, index) => {
           if (item.popular)
             return (
-              <Product key={index} image={item.image} title={item.title} />
+              <Product key={index} image={item.img} title={item.title} />
             );
         })}
       </div>

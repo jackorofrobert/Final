@@ -8,7 +8,7 @@ import Offer from "../components/Offer";
 const Cats = () => {
   return (
     <div>
-      <div className="container-fluid slider">
+      <div className="container slider">
         <img src={background} alt="Background" />
       </div>
       <div className="clear"></div>
@@ -21,7 +21,7 @@ const Cats = () => {
       <div className="container">
         {data.catData.map((item, index) => {
           return (
-            <Product key={index} image={item.image} title={item.title} />
+            <Product key={index} image={item.img} title={item.title} />
           );
         })}
       </div>

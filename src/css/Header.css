@@ -20,7 +20,7 @@
 }
 
 .dropbtn {
-  background-color: white;
+  /* background-color: white; */
   color: black;
   padding: 16px;
   font-size: 16px;
@@ -48,7 +48,7 @@
   display: block;
 }
 
-.dropdown-content a:hover {
+.dropdown-content:hover {
   background-color: white;
 }
 
@@ -57,7 +57,8 @@
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #ebdbc1;
+  background-color: #fff;
+  color: black;
 }
 
 .flex {

@@ -10,9 +10,12 @@ import Dogs from "./pages/Dogs";
 import Cats from "./pages/Cats";
 import DogShop from "./pages/DogShop";
 import CatShop from "./pages/CatShop";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const authen = JSON.parse(localStorage.getItem('authen')) || undefined;
 
   const toggleVisibility = useCallback(() => {
     if (window.pageYOffset > 20) {
@@ -41,9 +44,12 @@ const App = () => {
   }, [toggleVisibility]);
   return (
     <div>
-      <div className="container">
-        <Header />
+      <div style={{background: '#ebdbc1'}}>
+        <div className="container">
+          <Header authen={authen}/>
+        </div>
       </div>
+
       <div className="clear"></div>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -51,7 +57,10 @@ const App = () => {
         <Route path="/about/cats" element={<Cats />} />
         <Route path="/shop/dogs" element={<DogShop />} />
         <Route path="/shop/cats" element={<CatShop />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/register" element={<SignUp />} />
       </Routes>
+      <div className="clear"></div>
       <div className="container-fluid bg-footer">
         <Footer />
       </div>

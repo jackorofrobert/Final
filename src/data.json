@@ -2,7 +2,7 @@
   "dogShopData": [
     {
       "name": "Roast Beef",
-      "img": "img/dogfood.jpg",
+      "img": "../img/dogfood.jpg",
       "weight": 1.5,
       "target": "dog",
       "price": 100,
@@ -11,7 +11,7 @@
     },
     {
       "name": "Beef Milk",
-      "img": "img/dogfood2.jpg",
+      "img": "../img/dogfood2.jpg",
       "weight": 1.5,
       "target": "dog",
       "price": 100,
@@ -20,7 +20,7 @@
     },
     {
       "name": "Class Pet",
-      "img": "img/dogfood3.jpg",
+      "img": "../img/dogfood3.jpg",
       "weight": 1.5,
       "target": "dog",
       "price": 100,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Pedigree",
-      "img": "img/dogfood4.jpg",
+      "img": "../img/dogfood4.jpg",
       "weight": 1.5,
       "target": "dog",
       "price": 100,
@@ -38,7 +38,7 @@
     },
     {
       "name": "House 1",
-      "img": "img/doghouse.jpg",
+      "img": "../img/doghouse.jpg",
       "weight": 20,
       "target": "dog",
       "price": 100,
@@ -47,7 +47,7 @@
     },
     {
       "name": "House 2",
-      "img": "img/doghouse2.jpg",
+      "img": "../img/doghouse2.jpg",
       "weight": 20,
       "target": "dog",
       "price": 100,
@@ -56,7 +56,7 @@
     },
     {
       "name": "House 3",
-      "img": "img/doghouse3.jpg",
+      "img": "../img/doghouse3.jpg",
       "weight": 10,
       "target": "dog",
       "price": 100,
@@ -65,7 +65,7 @@
     },
     {
       "name": "House 4",
-      "img": "img/doghouse4.jpg",
+      "img": "../img/doghouse4.jpg",
       "weight": 20,
       "target": "dog",
       "price": 100,
@@ -74,7 +74,7 @@
     },
     {
       "name": "Toy 1",
-      "img": "img/dogtoy.jpg",
+      "img": "../img/dogtoy.jpg",
       "weight": 0.1,
       "target": "dog",
       "price": 100,
@@ -83,7 +83,7 @@
     },
     {
       "name": "Toy 2",
-      "img": "img/dogtoy2.jpg",
+      "img": "../img/dogtoy2.jpg",
       "weight": 0.1,
       "target": "dog",
       "price": 100,
@@ -92,7 +92,7 @@
     },
     {
       "name": "Toy 3",
-      "img": "img/dogtoy3.jpg",
+      "img": "../img/dogtoy3.jpg",
       "weight": 0.1,
       "target": "dog",
       "price": 100,
@@ -101,7 +101,7 @@
     },
     {
       "name": "Toy 4",
-      "img": "img/dogtoy4.jpg",
+      "img": "../img/dogtoy4.jpg",
       "weight": 0.1,
       "target": "dog",
       "price": 100,
@@ -113,7 +113,7 @@
   "catShopData": [
     {
       "name": "Whiskas",
-      "img": "img/catfood.jpg",
+      "img": "../img/catfood.jpg",
       "weight": 1.5,
       "target": "cat",
       "price": 100,
@@ -122,7 +122,7 @@
     },
     {
       "name": "Royal Canin",
-      "img": "img/catfood2.jpg",
+      "img": "../img/catfood2.jpg",
       "weight": 1.5,
       "target": "cat",
       "price": 100,
@@ -131,7 +131,7 @@
     },
     {
       "name": "Me-O",
-      "img": "img/catfood3.jpg",
+      "img": "../img/catfood3.jpg",
       "weight": 1.5,
       "target": "cat",
       "price": 100,
@@ -140,7 +140,7 @@
     },
     {
       "name": "Catsrang",
-      "img": "img/catfood4.jpg",
+      "img": "../img/catfood4.jpg",
       "weight": 1.5,
       "target": "cat",
       "price": 100,
@@ -149,7 +149,7 @@
     },
     {
       "name": "House 1",
-      "img": "img/cathouse.jpg.jpg",
+      "img": "../img/cathouse.jpg",
       "weight": 20,
       "target": "cat",
       "price": 100,
@@ -158,7 +158,7 @@
     },
     {
       "name": "House 2",
-      "img": "img/cathouse2.jpg",
+      "img": "../img/cathouse2.jpg",
       "weight": 20,
       "target": "cat",
       "price": 100,
@@ -167,7 +167,7 @@
     },
     {
       "name": "House 3",
-      "img": "img/cathouse3.jpg",
+      "img": "../img/cathouse3.jpg",
       "weight": 10,
       "target": "cat",
       "price": 100,
@@ -176,7 +176,7 @@
     },
     {
       "name": "House 4",
-      "img": "img/cathouse4.jpg",
+      "img": "../img/cathouse4.jpg",
       "weight": 20,
       "target": "cat",
       "price": 100,
@@ -185,7 +185,7 @@
     },
     {
       "name": "Toy 1",
-      "img": "img/cattoy.jpg",
+      "img": "../img/cattoy.jpg",
       "weight": 0.1,
       "target": "cat",
       "price": 100,
@@ -194,7 +194,7 @@
     },
     {
       "name": "Toy 2",
-      "img": "img/cattoy2.jpg",
+      "img": "../img/cattoy2.jpg",
       "weight": 0.1,
       "target": "cat",
       "price": 100,
@@ -203,7 +203,7 @@
     },
     {
       "name": "Toy 3",
-      "img": "img/cattoy3.jpg",
+      "img": "../img/cattoy3.jpg",
       "weight": 0.1,
       "target": "cat",
       "price": 100,
@@ -212,7 +212,7 @@
     },
     {
       "name": "Toy 4",
-      "img": "img/cattoy4.jpg",
+      "img": "../img/cattoy4.jpg",
       "weight": 0.1,
       "target": "cat",
       "price": 100,
@@ -222,28 +222,28 @@
   ],
 
   "dogData": [
-    { "image": "./img/Alaska.jpg", "title": "Alaska", "popular": true },
-    { "image": "img/Corgi.jpg", "title": "Corgi", "popular": true },
-    { "image": "img/Husky.jpg", "title": "Husky", "popular": true },
-    { "image": "img/Poodle.jpg", "title": "Poodle", "popular": true },
-    { "image": "img/Pug.jpg", "title": "Pug", "popular": false },
-    { "image": "img/Bulldog.jpg", "title": "Bulldog", "popular": false },
-    { "image": "img/Chihuahua.jpg", "title": "Chihuahua", "popular": false },
+    { "img": "../img/Alaska.jpg", "title": "Alaska", "popular": true },
+    { "img": "../img/Corgi.jpg", "title": "Corgi", "popular": true },
+    { "img": "../img/husky.jpg", "title": "Husky", "popular": true },
+    { "img": "../img/Poodle.jpg", "title": "Poodle", "popular": true },
+    { "img": "../img/Pug.jpg", "title": "Pug", "popular": false },
+    { "img": "../img/Bulldog.jpg", "title": "Bulldog", "popular": false },
+    { "img": "../img/Chihuahua.jpg", "title": "Chihuahua", "popular": false },
     {
-      "image": "img/Golden_Retriever.jpg",
+      "img": "../img/GoldenRetriever.jpg",
       "title": "Golden_Retriever",
       "popular": false
     }
   ],
 
   "catData": [
-    { "image": "img/Munchkin.jpg", "title": "Munchkin", "popular": true },
-    { "image": "img/Korat.jpg", "title": "Korat", "popular": true  },
-    { "image": "img/Bengall.jpg", "title": "Bengall", "popular": true  },
-    { "image": "img/Exotic.jpg", "title": "Exotic", "popular": true  },
-    { "image": "img/Ragdoll.jpg", "title": "Ragdoll", "popular": false  },
-    { "image": "img/Angora.jpg", "title": "Angora", "popular": false  },
-    { "image": "img/Chartreux.jpg", "title": "Chartreux", "popular": false  },
-    { "image": "img/Tam thể.jpg", "title": "Tam thể", "popular": false  }
+    { "img": "../img/Munchkin.jpg", "title": "Munchkin", "popular": true },
+    { "img": "../img/Korat.jpg", "title": "Korat", "popular": true  },
+    { "img": "../img/Bengal.jpg", "title": "Bengall", "popular": true  },
+    { "img": "../img/Exotic.jpg", "title": "Exotic", "popular": true  },
+    { "img": "../img/Ragdoll.jpg", "title": "Ragdoll", "popular": false  },
+    { "img": "../img/Angora.jpg", "title": "Angora", "popular": false  },
+    { "img": "../img/Chartreux.jpg", "title": "Chartreux", "popular": false  },
+    { "img": "../img/Tam thể.jpg", "title": "Tam thể", "popular": false  }
   ]
 }
