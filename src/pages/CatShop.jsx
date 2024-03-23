@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Product from '../components/shopProduct';
 import data from "../data.json";
 import { useNavigate } from 'react-router-dom';
@@ -6,10 +6,11 @@ import { useNavigate } from 'react-router-dom';
 const CatShop = () => {
   const authen = JSON.parse(localStorage.getItem('authen')) || undefined;
   const navigate = useNavigate();
-  console.log(authen)
-  if (!authen) {
-   navigate('/login');
-  }
+  useEffect(() => {
+    if (!authen) {
+      navigate('/login', { replace: true });
+    }
+  }, [authen, navigate]);
     return (
         <div>
           <div className="col-12 mt-15px" style={{ textAlign: 'center' }}>

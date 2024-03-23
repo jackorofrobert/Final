@@ -59,6 +59,7 @@ const App = () => {
         <Route path="/shop/cats" element={<CatShop />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/register" element={<SignUp />} />
+        <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
       <div className="clear"></div>
       <div className="container-fluid bg-footer">

@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Product from '../components/shopProduct';
 import data from "../data.json";
 import { useNavigate } from 'react-router-dom';
 
 const DogShop = () => {
-  // const authen = JSON.parse(localStorage.getItem('authen')) || undefined;
-  // const navigate = useNavigate();
-  // if (!authen) {
-  //   navigate('/login');
-  // }
+  const authen = JSON.parse(localStorage.getItem('authen')) || undefined;
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!authen) {
+      navigate('/login', { replace: true });
+    }
+  }, [authen, navigate]);
   return (
     <div>
       <div className="col-12 mt-15px" style={{ textAlign: 'center' }}>

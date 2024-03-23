@@ -222,7 +222,7 @@
   ],
 
   "dogData": [
-    { "img": "../img/Alaska.jpg", "title": "Alaska", "popular": true },
+    { "img": "../img/Alaska.jpg", "title": "Alaska", "popular": true, "" },
     { "img": "../img/Corgi.jpg", "title": "Corgi", "popular": true },
     { "img": "../img/husky.jpg", "title": "Husky", "popular": true },
     { "img": "../img/Poodle.jpg", "title": "Poodle", "popular": true },

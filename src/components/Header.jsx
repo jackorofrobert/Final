@@ -7,7 +7,6 @@ import "../css/Header.css";
 function Header({authen}) {
   const handleLogout = () => {
     localStorage.removeItem('authen');
-    // navigate('/');
   }
 
   return (
