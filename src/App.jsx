@@ -1,21 +1,23 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./css/font-awesome.css";
 import "./App.css";
 import "./css/TopButton.css";
-import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
 import Dogs from "./pages/Dogs";
 import Cats from "./pages/Cats";
 import DogShop from "./pages/DogShop";
 import CatShop from "./pages/CatShop";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import Detail from "./components/Detail";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const authen = JSON.parse(localStorage.getItem('authen')) || undefined;
+  const [authen, setAuhten] = useState(JSON.parse(localStorage.getItem('authen')) || undefined);
+  const location = useLocation();
 
   const toggleVisibility = useCallback(() => {
     if (window.pageYOffset > 20) {
@@ -25,6 +27,10 @@ const App = () => {
     }
   }, []);
 
+  useEffect(() => {
+    setAuhten(JSON.parse(localStorage.getItem('authen')) || undefined);
+  }, [location]);
+
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -32,6 +38,11 @@ const App = () => {
       behavior: "smooth",
     });
   };
+
+  const handleLogout = () => {
+    localStorage.removeItem('authen');
+    setAuhten(undefined);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,9 +55,9 @@ const App = () => {
   }, [toggleVisibility]);
   return (
     <div>
-      <div style={{background: '#ebdbc1'}}>
+      <div style={{ background: '#ebdbc1' }}>
         <div className="container">
-          <Header authen={authen}/>
+          <Header authen={authen} logout={handleLogout} />
         </div>
       </div>
 
@@ -59,6 +70,7 @@ const App = () => {
         <Route path="/shop/cats" element={<CatShop />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/register" element={<SignUp />} />
+        <Route path="/detail/:title" element={<Detail />} />
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
       <div className="clear"></div>

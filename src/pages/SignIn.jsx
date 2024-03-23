@@ -26,24 +26,25 @@ function SignIn() {
       navigate('/');
     } else {
       fetch('https://dummyjson.com/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        
-        username: username,
-        password: password,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: username,
+          password: password,
+        })
       })
-    })
-    .then(res => res.json())
-    .then(
-      (result) => {
-        localStorage.setItem('authen', JSON.stringify(result));
-        navigate('/');
-      },  
-      (error) => {
-        console.log(error);
-      }
-    );
+        .then(res => res.json())
+        .then(
+          (result) => {
+            if (result.message != 'Invalid credentials') {
+              localStorage.setItem('authen', JSON.stringify(result));
+              navigate('/');
+            } else alert('Đăng nhập không thành công')
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
     }
   };
 
