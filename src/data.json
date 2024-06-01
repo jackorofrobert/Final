@@ -107,9 +107,7 @@
       "price": 100,
       "type": "toy",
       "code": 12
-    }
-  ],
-  "catShopData": [
+    },
     {
       "name": "Whiskas",
       "img": "../img/catfood.jpg",
@@ -219,93 +217,127 @@
       "code": 24
     }
   ],
-  "dogData": [
+  "animal": [
     {
       "img": "../img/Alaska.jpg",
       "title": "Alaska",
       "popular": true,
-      "meal": "Trái ngược với cơ thể to lớn, Alaska có hệ tiêu hóa khá kém, hay mắc các bệnh đường ruột. Bạn nên chú ý cung cấp cho Alaska một khẩu phần và chế độ dinh dưỡng phù hợp để chúng phát triển toàn diện. Các chất dinh dưỡng cần thiết cho Alaska bao gồm: chất đạm, chất béo,  tinh bột, chất xơ, vitamin, canxi và chất khoáng.",
-      "meal_2_3": "Vào giai đoạn này, Alaska vừa mới cai sữa. Bạn nên chú ý cho chúng ăn thức ăn mềm, đã nghiền nát hoặc xay nhuyễn. Có thể cho chúng ăn cơm nhão trộn với thit nạc, thịt bò xay mềm. Nên cho chó Alaska nhỏ ăn 5 bữa/ngày, uống 200ml sữa mỗi ngày. Không nên cho chúng ăn quá no. Tuyệt đối không cho ăn cá và đồ tanh, có thể khiến Alaska bị bệnh tiêu chảy. Nếu cho ăn đồ khô thì nên ngâm mềm.",
-      "meal_3_6": "Chó Alaska ở tuổi này đã có thể cho ăn cơm trộn thịt bò, thịt lợn, thịt gà… Bạn nên cung cấp thêm rau, củ, quả vào bữa ăn hàng ngày. Nên giảm xuống cho chúng ăn 4 bữa: sáng, trưa, chiều, tối. Uống thêm 500ml sữa mỗi ngày.",
-      "meal_6": "Tuổi này, bạn giảm khẩu phần ăn của chúng xuống còn 2-3 bữa một ngày. Uống 0.8-1l sữa mỗi ngày. Cho Alaska ăn thực phẩm chứa nhiều protein, canxi hơn do chúng đang trong giai đoạn phát triển xương và cơ bắp mạnh mẽ nhất. Có thể cho Alaska gặm thêm xương động vật để kích thích răng và cơ hàm. Nhưng chỉ cho ăn số lượng ít, vì xương cứng quá có thể gây hóc trong quá trình ăn.",
-      "intro": "Chó Alaska hay Alaska Malamute hay Mahlemuts là một giống chó kéo xe ở Alaska. Giống chó sói được đặt tên theo bộ tộc Mahlemut là Malamute. Người Eskimo du mục ở Alaska đã khám phá ra chúng có khả năng di chuyển và kéo xe trên tuyết một khoảng cách rất lớn và liên tục. Họ đã cho lai tạo với những giống khác như chó Newfoundland hoặc St Bernard để có được giống chó ngày càng to hơn, khỏe hơn, bền bỉ hơn, và chịu được thời tiết khắc nghiệt của vùng Bắc Cực. Người Nga đã dùng những chú chó này đê chở lông thú và thịt thú rừng tới những khu vực lân cận để bán và đổi các mặt hàng khác. Giống chó này đòi hỏi được tập luyện hàng ngày nếu không chúng sẽ buồn chán và phá hoại."
+      "target": "dog",
+      "intro": "Chó Alaska, hay còn gọi là Alaska Malamute hoặc Mahlemuts, là một giống chó kéo xe nổi tiếng ở Alaska. Chúng được đặt tên theo bộ tộc Mahlemut là Malamute. Người Eskimo du mục ở Alaska đã phát hiện ra khả năng di chuyển và kéo xe trên tuyết của chúng, với khả năng di chuyển liên tục trên các quãng đường rất lớn. Họ đã lai tạo chúng với các giống khác như chó Newfoundland hoặc St Bernard để có được những con chó to hơn, khỏe mạnh hơn, và có thể chịu được thời tiết khắc nghiệt ở Bắc Cực. Người Nga sử dụng chúng để kéo các loại lông thú và thịt thú rừng đến những khu vực lân cận để trao đổi và bán hàng. Giống chó này yêu cầu việc huấn luyện hàng ngày, nếu không chúng có thể trở nên buồn chán và gây hại.",
+      "meal": "Alaska có hệ tiêu hóa khá yếu, dễ mắc các bệnh về đường ruột. Để chúng phát triển toàn diện, cần cung cấp một khẩu phần dinh dưỡng đầy đủ bao gồm chất đạm, chất béo, tinh bột, chất xơ, vitamin, canxi và chất khoáng.",
+      "meal_2_3": "Trong giai đoạn này, khi Alaska vừa mới cai sữa, nên chú ý cho chúng ăn thức ăn mềm, đã nghiền nhuyễn. Có thể cho chúng ăn cơm nhão trộn với thịt nạc, thịt bò xay mềm. Thức ăn nên được chia thành 5 bữa/ngày, cung cấp 200ml sữa mỗi ngày. Tránh cho chúng ăn quá no và không nên cho chúng ăn cá và đồ tanh, vì có thể gây bệnh tiêu chảy. Nếu cho ăn đồ khô, cần ngâm mềm trước khi cho ăn.",
+      "meal_3_6": "Chó Alaska ở tuổi này đã có thể ăn được cơm trộn với thịt bò, thịt lợn, thịt gà và các loại rau, củ, quả. Cần giảm số lần ăn xuống còn 4 bữa/ngày và cung cấp thêm 500ml sữa mỗi ngày.",
+      "meal_6": "Trong giai đoạn này, khẩu phần ăn nên giảm xuống còn 2-3 bữa mỗi ngày. Cần cung cấp 0.8-1l sữa mỗi ngày và tăng cường protein, canxi để hỗ trợ sự phát triển xương và cơ bắp mạnh mẽ nhất. Có thể cho Alaska gặm xương động vật để kích thích răng và cơ hàm, nhưng cần chỉ cho ăn số lượng ít để tránh nguy cơ hóc phải."
     },
     {
       "img": "../img/Corgi.jpg",
       "title": "Corgi",
-      "popular": true
+      "popular": true,
+      "target": "dog",
+      "intro": "Chó Corgi là một giống chó chăn cừu nhỏ gọn có nguồn gốc từ xứ Wales. Chúng nổi tiếng với hình dáng đặc biệt, với đôi chân ngắn và thân dài. Corgi thông minh, trung thành và năng động.",
+      "meal": "Chó Corgi cần một chế độ dinh dưỡng cân đối để duy trì sức khỏe và năng lượng. Quan trọng là cung cấp cho chúng thức ăn chất lượng cao phù hợp với tuổi và mức độ hoạt động của chúng. Bữa ăn nên được chia thành hai hoặc ba phần nhỏ trong ngày để tránh ăn quá nhiều.",
+      "meal_2_3": "Ở tuổi 2-3 tháng, chó con Corgi nên được ăn thức ăn dễ tiêu hóa, mềm dẻo. Bạn có thể trộn cơm cho chó con với nước hoặc sữa thay thế để tạo ra một hỗn hợp nhão nhuyễn. Quan trọng là phải cho chúng ăn nhỏ và thường xuyên để hỗ trợ sự phát triển của chúng.",
+      "meal_3_6": "Khi Corgi lớn lên, bạn có thể bắt đầu giới thiệu chúng với nhiều loại thức ăn khác nhau, bao gồm thịt gà, thịt lợn, thịt bò gầy, rau củ và quả. Bữa ăn nên được chia thành ba hoặc bốn phần nhỏ trong ngày để tránh các vấn đề về tiêu hóa. Quan trọng là theo dõi cân nặng của chúng và điều chỉnh khẩu phần ăn phù hợp.",
+      "meal_6": "Khi đạt 6 tháng tuổi, Corgi có thể chuyển sang ăn thức ăn cho chó người lớn. Bữa ăn của chúng nên bao gồm một sự pha trộn cân đối của protein, carbohydrate và chất béo lành mạnh để hỗ trợ nhu cầu năng lượng của chúng. Bạn cũng có thể giới thiệu chúng với các loại đồ chơi hoặc bánh quặng để thúc đẩy sức khỏe răng miệng tốt."
     },
     {
       "img": "../img/husky.jpg",
       "title": "Husky",
-      "popular": true
+      "popular": true,
+      "target": "dog",
+      "intro": "Chó Husky Siberia, thường gọi ngắn gọn là Husky, là một giống chó lai có nguồn gốc từ vùng Siberia ở Nga. Chúng được lai tạo đặc biệt để có thể kéo xe trong môi trường lạnh giá và tuyết phủ dày đặc.",
+      "meal": "Husky cần một chế độ ăn giàu protein và chất béo để duy trì năng lượng cho các hoạt động mạnh mẽ. Bữa ăn của chúng nên bao gồm thịt gia cầm, thịt cá và thịt bò kết hợp với các loại ngũ cốc và rau củ phong phú.",
+      "meal_2_3": "Ở độ tuổi 2-3 tháng, Husky cần được ăn thức ăn giàu protein để hỗ trợ sự phát triển của cơ bắp và xương. Thức ăn có thể được nghiền nhuyễn hoặc hòa tan trong nước hoặc sữa.",
+      "meal_3_6": "Khi Husky đạt đến 3-6 tháng tuổi, bạn có thể giảm số lần ăn xuống còn 3 bữa mỗi ngày và bắt đầu giới thiệu chúng với thức ăn nguội hoặc cung cấp thêm các loại ngũ cốc để tăng cường năng lượng.",
+      "meal_6": "Khi Husky đạt 6 tháng tuổi, khẩu phần ăn có thể được giảm xuống còn 2 bữa mỗi ngày. Cần chú ý cung cấp đủ nước uống cho chúng và tránh cho chúng ăn quá nhiều đồ ăn có chứa chất béo và đường."
     },
     {
       "img": "../img/Poodle.jpg",
       "title": "Poodle",
-      "popular": true
+      "popular": true,
+      "target": "dog",
+      "intro": "Chó Poodle là một giống chó thông minh và nhanh nhẹn, nổi tiếng với bộ lông xốp mịn và vẻ ngoài quý phái. Chúng là những người bạn tốt và thân thiện, thích hợp cho cả gia đình và người sống độc thân.",
+      "meal": "Chó Poodle cần một chế độ ăn cân đối để duy trì sức khỏe và năng lượng. Bữa ăn nên bao gồm thức ăn chất lượng cao và được chia thành hai hoặc ba phần nhỏ trong ngày.",
+      "meal_2_3": "Ở độ tuổi 2-3 tháng, Poodle con cần được ăn thức ăn dễ tiêu hóa và giàu dinh dưỡng để hỗ trợ sự phát triển. Thức ăn có thể được nghiền nhuyễn hoặc hòa tan trong nước hoặc sữa.",
+      "meal_3_6": "Khi Poodle lớn lên, bạn có thể bắt đầu giới thiệu chúng với các loại thức ăn khác nhau, bao gồm thịt gia cầm, thịt cá, rau củ và các loại ngũ cốc. Bữa ăn nên được chia thành ba hoặc bốn phần nhỏ trong ngày.",
+      "meal_6": "Khi đạt đến 6 tháng tuổi, Poodle đã trưởng thành và có thể chuyển sang ăn thức ăn cho chó người lớn. Bạn cũng có thể cung cấp thêm các loại bổ sung dinh dưỡng nếu cần thiết."
     },
     {
       "img": "../img/Pug.jpg",
       "title": "Pug",
-      "popular": false
+      "popular": false,
+      "target": "dog",
+      "intro": "Chó Pug là một giống chó nhỏ có nguồn gốc từ Trung Quốc. Chúng nổi tiếng với khuôn mặt đáng yêu, đuôi cuộn và tính cách vui vẻ, thân thiện.",
+      "meal": "Chó Pug cần một chế độ ăn cân đối để duy trì sức khỏe và tránh tăng cân quá mức. Bữa ăn của chúng nên bao gồm thức ăn giàu chất dinh dưỡng và được chia thành hai hoặc ba bữa nhỏ trong ngày.",
+      "meal_2_3": "Ở độ tuổi 2-3 tháng, Pug con cần được ăn thức ăn dễ tiêu hóa và giàu protein để hỗ trợ sự phát triển. Thức ăn nên được chia thành nhiều bữa nhỏ trong ngày để tránh tiêu chảy.",
+      "meal_3_6": "Khi Pug đạt đến 3-6 tháng tuổi, bạn có thể giảm số lần ăn xuống còn ba bữa mỗi ngày và bắt đầu giới thiệu chúng với thức ăn khô hoặc ướt. Bữa ăn nên bao gồm thịt gà, thịt cá, rau củ và ngũ cốc.",
+      "meal_6": "Khi Pug đạt 6 tháng tuổi, khẩu phần ăn có thể được giảm xuống còn hai bữa mỗi ngày. Bạn cần theo dõi cân nặng của chúng và điều chỉnh lượng thức ăn phù hợp."
     },
     {
       "img": "../img/Bulldog.jpg",
       "title": "Bulldog",
-      "popular": false
+      "popular": false,
+      "target": "dog",
+      "intro": "Chó Bulldog là một giống chó mạnh mẽ, có nguồn gốc từ Anh Quốc. Chúng nổi tiếng với vẻ ngoài lập dị, đầu to và thân hình cực kỳ cứng cáp.",
+      "meal": "Chó Bulldog cần một chế độ ăn cân đối để duy trì sức khỏe và tránh tăng cân quá mức. Bữa ăn của chúng nên bao gồm thức ăn giàu chất dinh dưỡng và được chia thành hai hoặc ba bữa nhỏ trong ngày.",
+      "meal_2_3": "Ở độ tuổi 2-3 tháng, Bulldog con cần được ăn thức ăn dễ tiêu hóa và giàu protein để hỗ trợ sự phát triển. Thức ăn nên được chia thành nhiều bữa nhỏ trong ngày để tránh tiêu chảy.",
+      "meal_3_6": "Khi Bulldog đạt đến 3-6 tháng tuổi, bạn có thể giảm số lần ăn xuống còn ba bữa mỗi ngày và bắt đầu giới thiệu chúng với thức ăn khô hoặc ướt. Bữa ăn nên bao gồm thịt gà, thịt cá, rau củ và ngũ cốc.",
+      "meal_6": "Khi Bulldog đạt 6 tháng tuổi, khẩu phần ăn có thể được giảm xuống còn hai bữa mỗi ngày. Bạn cần theo dõi cân nặng của chúng và điều chỉnh lượng thức ăn phù hợp."
     },
     {
       "img": "../img/Chihuahua.jpg",
       "title": "Chihuahua",
-      "popular": false
+      "popular": false,
+      "target": "dog",
+      "intro": "Chó Chihuahua là một giống chó nhỏ bé có nguồn gốc từ Mexico. Chúng nổi tiếng với tính cách quảng giao, sành điệu và tinh nghịch.",
+      "meal": "Chó Chihuahua cần một chế độ ăn cân đối để duy trì sức khỏe và tránh tăng cân quá mức. Bữa ăn của chúng nên bao gồm thức ăn giàu chất dinh dưỡng và được chia thành hai hoặc ba bữa nhỏ trong ngày.",
+      "meal_2_3": "Ở độ tuổi 2-3 tháng, Chihuahua con cần được ăn thức ăn dễ tiêu hóa và giàu protein để hỗ trợ sự phát triển. Thức ăn nên được chia thành nhiều bữa nhỏ trong ngày để tránh tiêu chảy.",
+      "meal_3_6": "Khi Chihuahua đạt đến 3-6 tháng tuổi, bạn có thể giảm số lần ăn xuống còn ba bữa mỗi ngày và bắt đầu giới thiệu chúng với thức ăn khô hoặc ướt. Bữa ăn nên bao gồm thịt gà, thịt cá, rau củ và ngũ cốc.",
+      "meal_6": "Khi Chihuahua đạt 6 tháng tuổi, khẩu phần ăn có thể được giảm xuống còn hai bữa mỗi ngày. Bạn cần theo dõi cân nặng của chúng và điều chỉnh lượng thức ăn phù hợp."
     },
-    {
-      "img": "../img/GoldenRetriever.jpg",
-      "title": "Golden_Retriever",
-      "popular": false
-    }
-  ],
-  "catData": [
     {
       "img": "../img/Munchkin.jpg",
       "title": "Munchkin",
-      "popular": true
+      "popular": true,
+      "target": "cat",
+      "intro": "Munchkin là một giống mèo có đặc điểm nổi bật là đôi chân ngắn hơn bình thường. Điều này là do một loại gen đặc biệt gây ra tình trạng khuyết tật ngắn chân. Mặc dù có vẻ ngoài đáng yêu và hấp dẫn, nhưng Munchkin vẫn có thể sống và hoạt động bình thường như các loại mèo khác.",
+      "meal": "Munchkin cần một chế độ ăn cân đối để duy trì sức khỏe và tránh tăng cân quá mức do thiếu vận động. Bữa ăn của chúng nên bao gồm thức ăn giàu protein và chất béo, cung cấp năng lượng cho các hoạt động hàng ngày.",
+      "meal_2_3": "Ở độ tuổi 2-3 tháng, Munchkin con cần được ăn thức ăn dễ tiêu hóa và giàu dinh dưỡng để hỗ trợ sự phát triển của cơ bắp và xương. Bữa ăn nên được chia thành nhiều bữa nhỏ trong ngày để tránh tiêu chảy.",
+      "meal_3_6": "Khi Munchkin đạt đến 3-6 tháng tuổi, bạn có thể giảm số lần ăn xuống còn ba bữa mỗi ngày và bắt đầu giới thiệu chúng với thức ăn khô hoặc ướt. Bữa ăn nên bao gồm thịt gà, thịt cá, rau củ và ngũ cốc.",
+      "meal_6": "Khi Munchkin đạt 6 tháng tuổi, khẩu phần ăn có thể được giảm xuống còn hai bữa mỗi ngày. Bạn cần theo dõi cân nặng của chúng và điều chỉnh lượng thức ăn phù hợp."
     },
     {
       "img": "../img/Korat.jpg",
       "title": "Korat",
-      "popular": true
+      "popular": true,
+      "target": "cat",
+      "intro": "Korat là một giống mèo có nguồn gốc từ Thái Lan. Chúng nổi tiếng với bộ lông màu xanh bóng và đôi mắt màu chát đặc trưng. Korat thường được xem là biểu tượng của sự may mắn và hạnh phúc trong văn hóa Thái Lan.",
+      "meal": "Mèo Korat cần một chế độ ăn giàu protein và chất béo để duy trì sức khỏe và năng lượng. Bữa ăn của chúng nên bao gồm thịt gà, cá và rau củ để cung cấp dinh dưỡng đầy đủ.",
+      "meal_2_3": "Ở độ tuổi 2-3 tháng, mèo Korat con cần được ăn thức ăn dễ tiêu hóa và giàu dinh dưỡng để hỗ trợ sự phát triển của cơ bắp và xương. Bữa ăn nên được chia thành nhiều bữa nhỏ trong ngày để tránh tiêu chảy.",
+      "meal_3_6": "Khi Korat đạt đến 3-6 tháng tuổi, bạn có thể giảm số lần ăn xuống còn ba bữa mỗi ngày và bắt đầu giới thiệu chúng với thức ăn khô hoặc ướt. Bữa ăn nên bao gồm thịt gà, cá, rau củ và ngũ cốc.",
+      "meal_6": "Khi Korat đạt 6 tháng tuổi, khẩu phần ăn có thể được giảm xuống còn hai bữa mỗi ngày. Bạn cần theo dõi cân nặng của chúng và điều chỉnh lượng thức ăn phù hợp."
     },
     {
       "img": "../img/Bengal.jpg",
-      "title": "Bengall",
-      "popular": true
+      "title": "Bengal",
+      "popular": true,
+      "target": "cat",
+      "intro": "Mèo Bengal là một giống mèo có nguồn gốc từ việc lai tạo giữa mèo Leopard và mèo Anh. Chúng nổi tiếng với bộ lông màu da báo và bản năng săn mồi mạnh mẽ. Bengal thường được coi là một trong những giống mèo hoang dã nhất trong các giống mèo nuôi.",
+      "meal": "Mèo Bengal cần một chế độ ăn giàu protein và chất béo để duy trì sức khỏe và năng lượng. Bữa ăn của chúng nên bao gồm thịt gia cầm, thịt cá và thịt bò kết hợp với các loại ngũ cốc và rau củ phong phú.",
+      "meal_2_3": "Ở độ tuổi 2-3 tháng, mèo Bengal con cần được ăn thức ăn dễ tiêu hóa và giàu dinh dưỡng để hỗ trợ sự phát triển của cơ bắp và xương. Bữa ăn nên được chia thành nhiều bữa nhỏ trong ngày để tránh tiêu chảy.",
+      "meal_3_6": "Khi Bengal đạt đến 3-6 tháng tuổi, bạn có thể giảm số lần ăn xuống còn ba bữa mỗi ngày và bắt đầu giới thiệu chúng với thức ăn khô hoặc ướt. Bữa ăn nên bao gồm thịt gà, cá, rau củ và ngũ cốc.",
+      "meal_6": "Khi Bengal đạt 6 tháng tuổi, khẩu phần ăn có thể được giảm xuống còn hai bữa mỗi ngày. Bạn cần theo dõi cân nặng của chúng và điều chỉnh lượng thức ăn phù hợp."
     },
     {
       "img": "../img/Exotic.jpg",
       "title": "Exotic",
-      "popular": true
-    },
-    {
-      "img": "../img/Ragdoll.jpg",
-      "title": "Ragdoll",
-      "popular": false
-    },
-    {
-      "img": "../img/Angora.jpg",
-      "title": "Angora",
-      "popular": false
-    },
-    {
-      "img": "../img/Chartreux.jpg",
-      "title": "Chartreux",
-      "popular": false
-    },
-    {
-      "img": "../img/Tam thể.jpg",
-      "title": "Tam thể",
-      "popular": false
+      "popular": true,
+      "target": "cat",
+      "intro": "Mèo Exotic là một giống mèo được biết đến với bộ lông ngắn, đặc biệt mềm mại và dày dặn. Chúng là sự kết hợp giữa giống mèo Persian và American Shorthair, tạo ra một vẻ đẹp độc đáo và quyến rũ.",
+      "meal": "Mèo Exotic cần một chế độ ăn cân đối để duy trì sức khỏe và tránh tăng cân quá mức do thiếu vận động. Bữa ăn của chúng nên bao gồm thức ăn giàu protein và chất béo, cung cấp năng lượng cho các hoạt động hàng ngày.",
+      "meal_2_3": "Ở độ tuổi 2-3 tháng, Exotic con cần được ăn thức ăn dễ tiêu hóa và giàu dinh dưỡng để hỗ trợ sự phát triển của cơ bắp và xương. Bữa ăn nên được chia thành nhiều bữa nhỏ trong ngày để tránh tiêu chảy.",
+      "meal_3_6": "Khi Exotic đạt đến 3-6 tháng tuổi, bạn có thể giảm số lần ăn xuống còn ba bữa mỗi ngày và bắt đầu giới thiệu chúng với thức ăn khô hoặc ướt. Bữa ăn nên bao gồm thịt gà, cá, rau củ và ngũ cốc.",
+      "meal_6": "Khi Exotic đạt 6 tháng tuổi, khẩu phần ăn có thể được giảm xuống còn hai bữa mỗi ngày. Bạn cần theo dõi cân nặng của chúng và điều chỉnh lượng thức ăn phù hợp."
     }
   ]
 }
