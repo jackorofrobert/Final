@@ -25,7 +25,7 @@ function SignIn() {
       localStorage.setItem('currentUser', JSON.stringify(existingUser));
       navigate('/');
     } else {
-      fetch('localhost:3000/api/v1/login', {
+      fetch('http://localhost:3000/api/v1/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
