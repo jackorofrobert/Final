@@ -1,4 +1,12 @@
-{
+const mongoose = require('mongoose');
+const Animal = require('./models/animal');
+const Shop = require('./models/shop');
+
+mongoose.connect('mongodb://localhost:27017/final', {})
+  .then(() => console.log('MongoDB connected...'))
+  .catch(err => console.error(err));
+
+data = {
   "shop": [
     {
       "name": "Roast Beef",
@@ -341,3 +349,18 @@
     }
   ]
 }
+
+const importData = () => {
+  console.log('Importing data...');
+  data.animal.forEach((item) => {
+    const animal = new Animal(item);
+    animal.save();
+  });
+  data.shop.forEach((item) => {
+    const shop = new Shop(item);
+    shop.save();
+  });
+  console.log('Data imported');
+}
+
+importData();
