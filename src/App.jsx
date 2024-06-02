@@ -16,7 +16,7 @@ import Detail from "./components/Detail";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [authen, setAuhten] = useState(JSON.parse(localStorage.getItem('authen')) || undefined);
+  const [accessToken, setAuhten] = useState(JSON.parse(localStorage.getItem('access_token')) || undefined);
   const location = useLocation();
 
   const toggleVisibility = useCallback(() => {
@@ -28,7 +28,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    setAuhten(JSON.parse(localStorage.getItem('authen')) || undefined);
+    setAuhten(JSON.parse(localStorage.getItem('access_token')) || undefined);
   }, [location]);
 
 
@@ -40,7 +40,7 @@ const App = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('authen');
+    localStorage.removeItem('access_token');
     setAuhten(undefined);
   }
 
@@ -57,7 +57,7 @@ const App = () => {
     <div>
       <div style={{ background: '#ebdbc1' }}>
         <div className="container">
-          <Header authen={authen} logout={handleLogout} />
+          <Header accessToken={accessToken} logout={handleLogout} />
         </div>
       </div>
 

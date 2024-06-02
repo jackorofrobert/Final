@@ -12,13 +12,28 @@ function RegisterForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!validateForm()) return; 
-
-    let users = JSON.parse(localStorage.getItem('users')) || [];
-    users.push({ username, email, password });
-    localStorage.setItem('users', JSON.stringify(users));
-
-    navigate('/login');
+    if (!validateForm()) return;
+    
+    fetch("localhost:3000/api/v1/register", {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        user_name: username,
+        email: email,
+        password: password
+      })
+    })
+      .then(res => res.json())
+      .then(
+        (result) => {
+          if (result.error) {
+            alert(result.error);
+          } else {
+            alert('Account created successfully');
+            navigate('/home');
+          }
+        }
+      );
   };
 
   const validateForm = () => {

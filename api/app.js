@@ -39,6 +39,19 @@ const authenticateJWT = (req, res, next) => {
     }
 };
 
+app.get('/api/check-token', (req, res) => {
+    const token = req.headers.authorization; // Assuming the token is sent in the Authorization header
+
+    // Your logic to verify token expiration
+    if (tokenIsValid(token)) {
+        // Token is still valid
+        return res.status(200).json({ message: 'Token is not expired' });
+    } else {
+        // Token has expired, log out the user
+        return res.status(401).json({ message: 'Token has expired, user logged out' });
+    }
+});
+
 // Register route
 app.post('/api/v1/register', async (req, res) => {
     try {
@@ -54,10 +67,7 @@ app.post('/api/v1/register', async (req, res) => {
         const newUser = new User({ user_name, email, password });
         const savedUser = await newUser.save();
 
-        // Create and assign a token
-        const token = jwt.sign({ _id: savedUser._id }, jwtSecret, { expiresIn: '1h' });
-
-        res.status(201).json({ token, user: savedUser });
+        res.status(201).json({ user: savedUser });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -83,7 +93,7 @@ app.post('/api/v1/login', async (req, res) => {
         // Create and assign a token
         const token = jwt.sign({ _id: user._id }, jwtSecret, { expiresIn: '1h' });
 
-        res.status(200).json({ token, user });
+        res.status(200).json({ message: "Success", token, user });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -106,7 +116,7 @@ app.get('/api/v1/shop', async (req, res) => {
     }
 
     const shop = await Shop.find(query);
-    res.status(200).json(shop);
+    res.status(200).json({message: 'Success', data: shop});
 });
 
 // Get Animal route
@@ -116,9 +126,8 @@ app.get('/api/v1/animal', async (req, res) => {
         query.target = req.query.target;
     }
     const animal = await Animal.find(query);
-    res.status(200).json(animal);
+    res.status(200).json({message: 'Success', data: animal});
 });
-
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);

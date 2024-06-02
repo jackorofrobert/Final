@@ -1,23 +1,41 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react'
 import Product from '../components/shopProduct';
-import data from "../data.json";
 import { useNavigate } from 'react-router-dom';
 
 const CatShop = () => {
-  const authen = JSON.parse(localStorage.getItem('authen')) || undefined;
-  const navigate = useNavigate();
+  const accessToken = JSON.parse(localStorage.getItem('access_token')) || undefined;
+  // const navigate = useNavigate();
+  // useEffect(() => {
+  //   if (!accessToken) {
+  //     navigate('/login', { replace: true });
+  //   }
+  // }, [accessToken, navigate]);
+
+  const [data, setData] = useState([]);
+
   useEffect(() => {
-    if (!authen) {
-      navigate('/login', { replace: true });
-    }
-  }, [authen, navigate]);
+    fetch("http://localhost:3000/api/v1/shop")
+      .then(res => res.json())
+      .then(result => {
+        if (result.error) {
+          alert(result.error);
+        } else {
+          console.log(result);
+          setData(result);
+        }
+      })
+      .catch(error => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+  
     return (
         <div>
           <div className="col-12 mt-15px" style={{ textAlign: 'center' }}>
             <b style={{ fontSize: '30px' }}>Thức ăn</b>
             <div className="container">
-              {data.catShopData.map((item, index) => {
-                if (item.type == "food") {
+              {data.data && data.data.map((item, index) => {
+                if (item.type == "food" && item.target == "cat") {
                   return (
                     <Product key={index} image={item.img} price={item.price} type={item.type}/>
                   );
@@ -29,8 +47,8 @@ const CatShop = () => {
           <div className="col-12 mt-15px" style={{ textAlign: 'center' }}>
             <b style={{ fontSize: '30px' }}>Nhà</b>
             <div className="container">
-              {data.catShopData.map((item, index) => {
-                if (item.type == "house") {
+              {data.data && data.data.map((item, index) => {
+                if (item.type == "house" && item.target == "cat") {
                   return (
                     <Product key={index} image={item.img} price={item.price} type={item.type}/>
                   );
@@ -42,8 +60,8 @@ const CatShop = () => {
           <div className="col-12 mt-15px" style={{ textAlign: 'center' }}>
             <b style={{ fontSize: '30px' }}>Đồ chơi</b>
             <div className="container">
-              {data.catShopData.map((item, index) => {
-                if (item.type == "toy") {
+              {data.data && data.data.map((item, index) => {
+                if (item.type == "toy" && item.target == "cat") {
                   return (
                     <Product key={index} image={item.img} price={item.price} type={item.type}/>
                   );

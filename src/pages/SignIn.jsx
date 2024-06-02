@@ -3,9 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../css/SignIn.css';
 
 function SignIn() {
-  const authen = localStorage.getItem('authen') || undefined;
+  const accessToken = localStorage.getItem('access_token') || undefined;
   const navigate = useNavigate();
-  if (authen) {
+  if (accessToken) {
     navigate('/');
   }
 
@@ -25,24 +25,24 @@ function SignIn() {
       localStorage.setItem('currentUser', JSON.stringify(existingUser));
       navigate('/');
     } else {
-      fetch('https://dummyjson.com/auth/login', {
+      fetch('localhost:3000/api/v1/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          username: username,
+          user_name: username,
           password: password,
         })
       })
         .then(res => res.json())
         .then(
           (result) => {
-            if (result.message != 'Invalid credentials') {
-              localStorage.setItem('authen', JSON.stringify(result));
+            if (result.error) {
+              alert(result.error);
+            } else {
+              alert('Login successfully');
+              localStorage.setItem('access_token', result.access_token);
               navigate('/');
-            } else alert('Đăng nhập không thành công')
-          },
-          (error) => {
-            console.log(error);
+            }
           }
         );
     }
