@@ -37,7 +37,7 @@ const Cats = () => {
       <div className="container">
         {data.data && data.data.map((item, index) => {
           return (
-            <Product key={index} image={item.img} title={item.title} />
+            <Product key={index} image={item.img} title={item.title} id={item._id}/>
           );
         })}
       </div>

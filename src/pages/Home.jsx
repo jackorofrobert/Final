@@ -41,7 +41,7 @@ const Home = () => {
           data.data.map((item, index) => {
             if (item.popular && item.target === "dog")
               return (
-                <Product key={index} image={item.img} title={item.title} />
+                <Product key={index} image={item.img} title={item.title} id={item._id} />
               );
           })}
       </div>
@@ -52,7 +52,7 @@ const Home = () => {
           data.data.map((item, index) => {
             if (item.popular && item.target === "cat")
               return (
-                <Product key={index} image={item.img} title={item.title} />
+                <Product key={index} image={item.img} title={item.title} id={item._id} />
               );
           })}
       </div>

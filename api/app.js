@@ -137,6 +137,12 @@ app.get('/api/v1/animal', async (req, res) => {
     const animal = await Animal.find(query);
     res.status(200).json({ message: 'Success', data: animal });
 });
+
+app.get('/api/v1/animal/:id', async (req, res) => {
+    const animal = await Animal.findById(req.params.id);
+    res.status(200).json({ message: 'Success', data: animal });
+});
+ 
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
