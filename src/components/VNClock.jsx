@@ -18,7 +18,10 @@ function VNClock() {
 const getInitialTime = () => getVNTime(new Date());
 
 const getVNTime = (dateObject) => {
-  const monthNames = ["January", "February", "March", /* ... */ "December"];
+  const monthNames = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
   const month = monthNames[dateObject.getMonth()];
 
   const year = dateObject.getFullYear();
