@@ -5,7 +5,6 @@ import data from "../data.json";
 
 function Detail() {
   const { title } = useParams();
-  console.log(data, title);
 
   const product = data.dogData.find((item) => item.title === title);
 

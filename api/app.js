@@ -26,7 +26,7 @@ mongoose.connect('mongodb://localhost:27017/final', {})
 
 // Middleware to authenticate JWT
 const authenticateJWT = (req, res, next) => {
-    const token = req.header('Authorization')?.replace('Bearer ', '');
+    const token = req.headers.authorization?.replace('Bearer ', '');
     if (!token) {
         return res.status(401).json({ error: 'Access denied, token missing!' });
     }
@@ -39,10 +39,9 @@ const authenticateJWT = (req, res, next) => {
     }
 };
 
-app.get('/api/check-token', (req, res) => {
-    const token = req.headers.authorization; // Assuming the token is sent in the Authorization header
+app.post('/api/v1/check-token', (req, res) => {
+    const token = req.headers.authorization?.replace('Bearer ', '');
 
-    // Your logic to verify token expiration
     if (tokenIsValid(token)) {
         // Token is still valid
         return res.status(200).json({ message: 'Token is not expired' });
@@ -51,6 +50,16 @@ app.get('/api/check-token', (req, res) => {
         return res.status(401).json({ message: 'Token has expired, user logged out' });
     }
 });
+
+// Check if the token is still valid
+const tokenIsValid = (token) => {
+    try {
+        jwt.verify(token, jwtSecret);
+        return true;
+    } catch (error) {
+        return false;
+    }
+};
 
 // Register route
 app.post('/api/v1/register', async (req, res) => {
@@ -106,7 +115,7 @@ app.get('/api/v1/get-me', authenticateJWT, async (req, res) => {
 });
 
 // Get Shop route
-app.get('/api/v1/shop', async (req, res) => {
+app.get('/api/v1/shop', authenticateJWT, async (req, res) => {
     let query = {};
     if (req.query.is_popular) {
         query.popular = true;
@@ -116,7 +125,7 @@ app.get('/api/v1/shop', async (req, res) => {
     }
 
     const shop = await Shop.find(query);
-    res.status(200).json({message: 'Success', data: shop});
+    res.status(200).json({ message: 'Success', data: shop });
 });
 
 // Get Animal route
@@ -126,7 +135,7 @@ app.get('/api/v1/animal', async (req, res) => {
         query.target = req.query.target;
     }
     const animal = await Animal.find(query);
-    res.status(200).json({message: 'Success', data: animal});
+    res.status(200).json({ message: 'Success', data: animal });
 });
 // Start the server
 app.listen(port, () => {

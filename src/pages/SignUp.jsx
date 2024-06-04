@@ -13,7 +13,7 @@ function RegisterForm() {
     e.preventDefault();
 
     if (!validateForm()) return;
-    
+
     fetch("http://localhost:3000/api/v1/register", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -30,7 +30,7 @@ function RegisterForm() {
             alert(result.error);
           } else {
             alert('Account created successfully');
-            navigate('/home');
+            navigate('/login');
           }
         }
       );
@@ -62,7 +62,7 @@ function RegisterForm() {
       return false;
     }
 
-    return true; 
+    return true;
   };
 
   return (

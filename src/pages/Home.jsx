@@ -39,7 +39,6 @@ const Home = () => {
         <PopularSection />
         {data.data &&
           data.data.map((item, index) => {
-            console.log(item);
             if (item.popular && item.target === "dog")
               return (
                 <Product key={index} image={item.img} title={item.title} />

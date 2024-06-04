@@ -16,8 +16,23 @@ import Detail from "./components/Detail";
 
 const App = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [accessToken, setAuhten] = useState(JSON.parse(localStorage.getItem('access_token')) || undefined);
+  const [accessToken, setAuhten] = useState(localStorage.getItem('access_token') || undefined);
   const location = useLocation();
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/v1/check-token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+    }).then((res) => {
+      if (res.status === 401) {
+        localStorage.removeItem("access_token");
+        setAuhten(undefined);
+      }
+    });
+  }, [accessToken]);
 
   const toggleVisibility = useCallback(() => {
     if (window.pageYOffset > 20) {
@@ -28,7 +43,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    setAuhten(JSON.parse(localStorage.getItem('access_token')) || undefined);
+    setAuhten(localStorage.getItem('access_token') || undefined);
   }, [location]);
 
 

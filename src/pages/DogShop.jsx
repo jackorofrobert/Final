@@ -3,30 +3,45 @@ import Product from '../components/shopProduct';
 import { useNavigate } from 'react-router-dom';
 
 const DogShop = () => {
-  const accessToken = JSON.parse(localStorage.getItem('access_token')) || undefined;
-  // const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (!accessToken) {
-  //     navigate('/login', { replace: true });
-  //   }
-  // }, [accessToken, navigate]);
+  const accessToken = localStorage.getItem('access_token') || undefined;
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!accessToken) {
+      navigate('/login', { replace: true });
+    }
+  }, [accessToken, navigate]);
 
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/v1/shop")
-      .then(res => res.json())
-      .then(result => {
-        if (result.error) {
-          alert(result.error);
-        } else {
-          console.log(result);
-          setData(result);
-        }
-      })
-      .catch(error => {
+    fetch("http://localhost:3000/api/v1/shop", {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${accessToken}`,
+      }
+    })
+    .then(res => {
+      if (res.status === 401) {
+        throw new Error('Unauthorized access - 401');
+      }
+      return res.json();
+    })
+    .then(result => {
+      if (result.error) {
+        alert(result.error);
+      } else {
+        setData(result);
+      }
+    })
+    .catch(error => {
+      if (error.message === 'Unauthorized access - 401') {
+        alert('Unauthorized access. Please log in.');
+        localStorage.removeItem('access_token');
+      } else {
         console.error("Error fetching data:", error);
-      });
+      }
+    });
   }, []);
 
   return (
@@ -37,11 +52,11 @@ const DogShop = () => {
           {data.data && data.data.map((item, index) => {
             if (item.type === "food" && item.target === "dog") {
               return (
-                <Product key={index} image={item.img} price={item.price} type={item.type}/>
+                <Product key={index} image={item.img} price={item.price} type={item.type} />
               );
             }
           })}
-        </div> 
+        </div>
       </div>
       <div className="clear"></div>
       <div className="col-12 mt-15px" style={{ textAlign: 'center' }}>
@@ -50,11 +65,11 @@ const DogShop = () => {
           {data.data && data.data.map((item, index) => {
             if (item.type === "house" && item.target === "dog") {
               return (
-                <Product key={index} image={item.img} price={item.price} type={item.type}/>
+                <Product key={index} image={item.img} price={item.price} type={item.type} />
               );
             }
           })}
-        </div> 
+        </div>
       </div>
       <div className="clear"></div>
       <div className="col-12 mt-15px" style={{ textAlign: 'center' }}>
@@ -63,11 +78,11 @@ const DogShop = () => {
           {data.data && data.data.map((item, index) => {
             if (item.type === "toy" && item.target === "dog") {
               return (
-                <Product key={index} image={item.img} price={item.price} type={item.type}/>
+                <Product key={index} image={item.img} price={item.price} type={item.type} />
               );
             }
           })}
-        </div> 
+        </div>
       </div>
     </div>
   )

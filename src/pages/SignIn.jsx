@@ -29,7 +29,7 @@ function SignIn() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          user_name: username,
+          email: username,
           password: password,
         })
       })
@@ -40,7 +40,7 @@ function SignIn() {
               alert(result.error);
             } else {
               alert('Login successfully');
-              localStorage.setItem('access_token', result.access_token);
+              localStorage.setItem('access_token', result.token);
               navigate('/');
             }
           }
