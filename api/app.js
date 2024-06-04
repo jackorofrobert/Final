@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cors());
 
 // Secret key for JWT
-const jwtSecret = 'your_secret_key';
+const jwtSecret = 'JackOr';
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/final', {})

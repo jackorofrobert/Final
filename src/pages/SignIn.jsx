@@ -58,7 +58,7 @@ function SignIn() {
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            placeholder="username"
+            placeholder="Email"
             required
           />
         </div>
