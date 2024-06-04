@@ -21,27 +21,28 @@ const DogShop = () => {
         'Authorization': `Bearer ${accessToken}`,
       }
     })
-    .then(res => {
-      if (res.status === 401) {
-        throw new Error('Unauthorized access - 401');
-      }
-      return res.json();
-    })
-    .then(result => {
-      if (result.error) {
-        alert(result.error);
-      } else {
-        setData(result);
-      }
-    })
-    .catch(error => {
-      if (error.message === 'Unauthorized access - 401') {
-        alert('Unauthorized access. Please log in.');
-        localStorage.removeItem('access_token');
-      } else {
-        console.error("Error fetching data:", error);
-      }
-    });
+      .then(res => {
+        if (res.status === 401) {
+          throw new Error('Unauthorized access - 401');
+        }
+        return res.json();
+      })
+      .then(result => {
+        if (result.error) {
+          alert(result.error);
+        } else {
+          setData(result);
+        }
+      })
+      .catch(error => {
+        if (error.message === 'Unauthorized access - 401') {
+          alert('Unauthorized access. Please log in.');
+          localStorage.removeItem('access_token');
+          navigate('/login', { replace: true });
+        } else {
+          console.error("Error fetching data:", error);
+        }
+      });
   }, []);
 
   return (
