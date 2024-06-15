@@ -1,0 +1,54 @@
+/* styles.css */
+
+/* Clear floats */
+.clear {
+    clear: both;
+  }
+  
+  /* Center text */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Margin top */
+  .mt-15px {
+    margin-top: 15px;
+  }
+  
+  /* Container margin top */
+  .mt-30 {
+    margin-top: 30px;
+  }
+  
+  /* Blue text color */
+  .blue {
+    color: blue;
+  }
+  
+  /* Slider container */
+  .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Background for product container */
+  .bg-product2 {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  /* General container for sections */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Title font size */
+  .title-font {
+    font-size: 30px;
+  }
+  
